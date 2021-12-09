@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+</head>
+<body>
+    
+    <h1>Welcome to the Score and Points Portal!</h1>
+    <h3>Listes des clubs:</h3>
+    <ul>
+        {% for lesclub in clubs%}
+        <li>
+            Name : {{lesclub['name']}}<br />
+            email : {{lesclub['email']}}</br>
+            points : {{lesclub['points']}}</br>
+            soldes de points : {{lesclub['solde']}}
+        </li>
+        <hr />
+        {% endfor %}
+    </ul>
+
+    
+    
+    <a href="{{url_for('index')}}">logout </a>
+</body>
+</html>
